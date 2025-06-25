@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rubik's Cube Simulator</title>
+  <style>
+    button { margin: 5px; padding: 10px; }
+    #moves { margin-top: 10px; font-family: monospace; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+
+  <h1>Rubik's Cube Moves</h1>
+
+  <div>
+    <button onclick="makeMove('rotateU')">U</button>
+    <button onclick="makeMove('rotateD')">D</button>
+    <button onclick="makeMove('rotateL')">L</button>
+    <button onclick="makeMove('rotateR')">R</button>
+    <button onclick="makeMove('rotateF')">F</button>
+    <button onclick="makeMove('rotateB')">B</button>
+    <button onclick="applyPrime('rotateU')">U'</button>
+<button onclick="applyPrime('rotateD')">D'</button>
+<button onclick="applyPrime('rotateL')">L'</button>
+<button onclick="applyPrime('rotateR')">R'</button>
+<button onclick="applyPrime('rotateF')">F'</button>
+<button onclick="applyPrime('rotateB')">B'</button>
+<br><br>
+<button onclick="solve()">Solve</button>
+
+    <button onclick="displayCube()">Display Cube</button>
+    <button onclick="scramble()">Scramble</button>
+  </div>
+
+  <h3>Moves History:</h3>
+  <div id="moves"></div>
+
+  <h3>Cube State (Text):</h3>
+  <pre id="cubeOutput"></pre>
+
+  <script src="cube.js"></script>
+</body>
+</html>
